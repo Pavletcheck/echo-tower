@@ -31,6 +31,18 @@ D:\Programs\WebUI\Data\Packages\ComfyUI\venv\Scripts\python.exe -u main.py `
   --preview-mode auto --use-pytorch-cross-attention --enable-manager --lowvram
 ```
 
+## Публикация в вебе (GitHub Pages)
+
+Играбельная веб-версия: **https://pavletcheck.github.io/echo-tower/** (репозиторий `Pavletcheck/echo-tower`,
+ветка `gh-pages`). Сборка — платформа `mock`, hash-роутинг, поэтому Pages работает как есть.
+
+```powershell
+cd "C:\Users\pasha\Desktop\Prompt\Echo Tower"
+powershell -ExecutionPolicy Bypass -File .\deploy.ps1   # build + force-push dist в gh-pages
+```
+
+Токен `gh` без scope `workflow`, поэтому автодеплой через GitHub Actions не используется.
+
 MCP-инструменты ComfyUI: `generate_image`, `img2img`, `upscale_image`, `remove_background`, `to_webp`, `resize_image`, `server_info`, `list_checkpoints`, `job_status`, `queue_status`.
 
 ## Ассеты: 183 из 232
