@@ -1,0 +1,146 @@
+.root {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.55));
+  transition: transform 160ms var(--ease-spring);
+}
+
+.root:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.root:active {
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
+.hex {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 64px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(160deg, rgba(108, 76, 241, 0.85), rgba(46, 36, 80, 0.7));
+}
+
+.inner {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 62px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(165deg, #2b2153 0%, #141026 55%, #0a0715 100%);
+  color: var(--arcane-light);
+}
+
+.root:hover .inner {
+  color: var(--gold);
+  background: linear-gradient(165deg, #3a2b6e 0%, #191233 55%, #0a0715 100%);
+}
+
+.lock {
+  position: absolute;
+  right: 2px;
+  bottom: 6px;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--stroke-bright);
+  border-radius: 50%;
+  background: var(--bg-void);
+  color: var(--text-dim);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 14px;
+  margin-top: -1px;
+  padding: 0 6px;
+  border: 1px solid rgba(233, 196, 106, 0.45);
+  border-radius: 999px;
+  background: rgba(9, 7, 18, 0.85);
+  color: var(--gold);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 255, 0.78);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+}
+
+.hexArt {
+  background: linear-gradient(
+    160deg,
+    rgba(233, 196, 106, 0.62) 0%,
+    rgba(108, 76, 241, 0.55) 45%,
+    rgba(233, 196, 106, 0.38) 100%
+  );
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.art {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+  display: block;
+}
+
+.hexArt .inner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.hexArt .art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  /* Здания темнее фона лобби, чтобы гексы не «светились» поверх сцены. */
+  filter: brightness(0.64) saturate(0.92) contrast(1.04);
+  transition: filter 180ms var(--ease-out);
+}
+
+.hexArt .inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 90% at 50% 12%, rgba(108, 76, 241, 0.12), transparent 62%),
+    linear-gradient(180deg, rgba(10, 7, 20, 0.26) 0%, rgba(7, 5, 13, 0.54) 100%);
+  pointer-events: none;
+}
+
+.root:hover .hexArt .art {
+  filter: brightness(0.76) saturate(0.96) contrast(1.04);
+}
+
+.hexArt {
+  width: 72px;
+  height: 82px;
+}
+
+.hexArt .inner {
+  width: 66px;
+  height: 76px;
+}

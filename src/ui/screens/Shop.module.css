@@ -1,0 +1,259 @@
+.root {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fade-in 260ms var(--ease-out);
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: 50% 40%;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 5, 13, 0.94) 0%, rgba(7, 5, 13, 0.6) 30%, rgba(7, 5, 13, 0.88) 70%, #07050d 100%),
+    radial-gradient(90% 55% at 50% 40%, transparent 20%, rgba(7, 5, 13, 0.55) 100%);
+}
+
+.top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: calc(10px + var(--safe-top)) 12px 0;
+}
+
+.iconBtn {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--stroke);
+  border-radius: 11px;
+  background: rgba(9, 7, 18, 0.7);
+  color: var(--text-muted);
+}
+
+.heading {
+  display: grid;
+  gap: 1px;
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sub {
+  font-size: 10px;
+  color: var(--gold);
+}
+
+.tabs {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 5px;
+  padding: 10px 12px 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 7px 3px;
+  border: 1px solid var(--stroke);
+  border-radius: 9px;
+  background: rgba(9, 7, 18, 0.6);
+  color: var(--text-muted);
+  font-size: 9.5px;
+}
+
+.tabActive {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.scroll {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  padding: 8px 12px calc(14px + var(--safe-bottom));
+  overflow: auto;
+}
+
+.card,
+.adCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(28, 22, 51, 0.86), rgba(9, 7, 18, 0.94));
+}
+
+.adCard {
+  border-color: rgba(55, 224, 200, 0.4);
+  color: var(--echo);
+  font-size: 12px;
+}
+
+.adCard:disabled {
+  opacity: 0.5;
+}
+
+.adCount {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.cardInfo {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardName {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cardMeta {
+  font-size: 9.5px;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.cardBuy {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.price {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.empty {
+  padding: 14px 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.note {
+  padding: 8px 0;
+  text-align: center;
+  font-size: 10.5px;
+  color: var(--text-dim);
+}
+
+.iapBlock {
+  display: grid;
+  gap: 7px;
+  margin-top: 6px;
+}
+
+.sectionLabel {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.passCard {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid rgba(233, 196, 106, 0.35);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(60, 46, 20, 0.35), rgba(11, 8, 21, 0.95));
+}
+
+.passTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.passText {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.passGift {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0 2px;
+  padding: 8px 10px;
+  border: 1px solid rgba(233, 196, 106, 0.4);
+  border-radius: 12px;
+  background: rgba(60, 45, 20, 0.35);
+}
+
+.passGiftLabel {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.passGiftValue {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.giftGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.giftCard {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 8px 4px 6px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: rgba(20, 15, 36, 0.85);
+  color: var(--text);
+}
+
+.giftName {
+  font-size: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.giftOwned {
+  font-size: 8px;
+  color: var(--text-dim);
+}

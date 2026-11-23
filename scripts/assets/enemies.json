@@ -1,0 +1,33 @@
+[
+  {"family": "shards", "variant": "a", "prompt": "slender humanoid made of shattered glass shards, thin blade arm, teal inner glow, floating fragments around the body"},
+  {"family": "shards", "variant": "b", "prompt": "broad humanoid of faceted glass plates, thick shield of fused shards, teal light in the seams, heavy stance"},
+  {"family": "shards", "variant": "c", "prompt": "floating crystal mage of jagged glass, no legs, shard halo, teal rune glow, arcane posture"},
+
+  {"family": "hounds", "variant": "a", "prompt": "small glass hound pup, translucent body, glowing throat, four legs, sharp ears"},
+  {"family": "hounds", "variant": "b", "prompt": "adult glass hound, lean translucent body, glowing throat, bared teeth, predatory crouch"},
+  {"family": "hounds", "variant": "c", "prompt": "huge glass hound matriarch with a crown of shards, glowing throat, spiked spine, dominant stance"},
+
+  {"family": "frost-priests", "variant": "a", "prompt": "young frost acolyte in pale layered robes, hood down, frost rime on sleeves, holding a small ice relic"},
+  {"family": "frost-priests", "variant": "b", "prompt": "frost priest in heavy pale robes, ice staff, frozen veil, blue glow in the chest"},
+  {"family": "frost-priests", "variant": "c", "prompt": "frost hierarch with a tall crown of black ice, floating runes around the body, white and blue robes, imposing"},
+
+  {"family": "ash-legion", "variant": "a", "prompt": "burned legionary swordsman, charred segmented armor, ember cracks, short sword, ash falling"},
+  {"family": "ash-legion", "variant": "b", "prompt": "ash centurion with a scorched tower shield, heavy burned plate, ember plume, shield forward"},
+  {"family": "ash-legion", "variant": "c", "prompt": "ash standard bearer, burned armor, tall tattered banner with ember glow, one arm raised"},
+
+  {"family": "rot-gardeners", "variant": "a", "prompt": "fungal gardener, moss-covered apron, spore sack on the back, long trowel, green spores around"},
+  {"family": "rot-gardeners", "variant": "b", "prompt": "elder tree-bodied gardener, bark torso, root legs, glowing green eyes, heavy branch arms"},
+  {"family": "rot-gardeners", "variant": "c", "prompt": "fruitbearer caster with glowing seed pods growing from the shoulders, vine staff, toxic green light"},
+
+  {"family": "lightbearers", "variant": "a", "prompt": "small light spark spirit, floating orb body with thin golden limbs, radiant halo, bright core"},
+  {"family": "lightbearers", "variant": "b", "prompt": "light server in white and gold robes, blindfold, holding a candle lantern, golden glow"},
+  {"family": "lightbearers", "variant": "c", "prompt": "light keeper in heavy golden plate, tower shield of polished gold, radiant wings of light, stern"},
+
+  {"family": "echo-doubles", "variant": "a", "prompt": "shade double, humanoid silhouette of black smoke, teal afterimage trails, single curved blade, no face"},
+  {"family": "echo-doubles", "variant": "b", "prompt": "afterecho caster, translucent duplicate of a robed figure, teal echo rings, mirrored arms, glowing glyphs"},
+  {"family": "echo-doubles", "variant": "c", "prompt": "silent echo guardian, tall faceless grey figure, sewn mouth, faint teal seam down the chest, floating"},
+
+  {"family": "tower-machines", "variant": "a", "prompt": "hexagonal tower gear construct, black metal plating, teal core visible between plates, heavy treads"},
+  {"family": "tower-machines", "variant": "b", "prompt": "piston blade construct, black metal limbs, hydraulic piston arms, teal energy vents, aggressive stance"},
+  {"family": "tower-machines", "variant": "c", "prompt": "floating tower core construct, hexagon shell open around a glowing teal crystal heart, metal ribs, hovering"}
+]

@@ -1,0 +1,107 @@
+.root {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 40%;
+  background-color: var(--bg-void);
+  animation: fade-in 320ms var(--ease-out);
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 5, 13, 0.1) 0%, rgba(7, 5, 13, 0.12) 38%, rgba(7, 5, 13, 0.86) 72%, #07050d 100%),
+    radial-gradient(90% 60% at 50% 45%, transparent 30%, rgba(7, 5, 13, 0.55) 100%);
+}
+
+.gear {
+  position: absolute;
+  top: calc(14px + var(--safe-top));
+  right: calc(14px + var(--safe-right));
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: rgba(9, 7, 18, 0.58);
+  backdrop-filter: blur(8px);
+  color: var(--text-muted);
+  transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+}
+
+.gear:hover {
+  color: var(--text);
+  border-color: var(--stroke-bright);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 20px calc(18px + var(--safe-bottom));
+}
+
+.logoBlock {
+  margin-top: auto;
+  padding-bottom: 26px;
+  text-align: center;
+}
+
+.emblem {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 38px;
+  margin: 0 auto 12px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(160deg, rgba(233, 196, 106, 0.85), rgba(108, 76, 241, 0.4));
+  color: #1a1208;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 12vw, 56px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: 0.055em;
+  background: linear-gradient(180deg, #fff6e2 0%, #e9c46a 52%, #9a7024 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 8px 30px rgba(233, 196, 106, 0.22));
+}
+
+.sub {
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.46em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-indent: 0.46em;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+}
+
+.footer {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+}

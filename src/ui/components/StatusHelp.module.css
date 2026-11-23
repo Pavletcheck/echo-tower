@@ -1,0 +1,58 @@
+.list {
+  display: grid;
+  gap: 6px;
+  max-height: 58vh;
+  overflow-y: auto;
+}
+
+.row {
+  display: grid;
+  gap: 2px;
+  padding: 8px 10px;
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.row b {
+  font-size: 12px;
+}
+
+.row span {
+  color: var(--text-muted);
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+.row[data-status='bleed'] b {
+  color: #e06a7a;
+}
+
+.row[data-status='burn'] b {
+  color: #f0915a;
+}
+
+.row[data-status='freeze'] b,
+.row[data-status='slow'] b {
+  color: #6fb6ff;
+}
+
+.row[data-status='stun'] b,
+.row[data-status='taunt'] b {
+  color: #e9c46a;
+}
+
+.row[data-status='haste'] b,
+.row[data-status='regen'] b,
+.row[data-status='blessing'] b {
+  color: #37e0c8;
+}
+
+.row[data-status='mark'] b,
+.row[data-status='curse'] b {
+  color: #c08bff;
+}
+
+.row[data-status='shield'] b {
+  color: #9bd4ff;
+}

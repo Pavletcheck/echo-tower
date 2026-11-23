@@ -1,0 +1,237 @@
+.root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #07050d;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #0a0714, #07050d);
+  transition: background-image 240ms ease-out;
+}
+
+.units,
+.fx {
+  position: absolute;
+  inset: 0;
+}
+
+.fx {
+  pointer-events: none;
+}
+
+.unit {
+  position: absolute;
+  width: 19%;
+  transform: translate(-50%, -50%);
+  transition: opacity 300ms ease-out;
+}
+
+.boss {
+  width: 26%;
+}
+
+.hex {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.9;
+  overflow: hidden;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(155, 123, 255, 0.18), rgba(7, 5, 13, 0.96));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  outline: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: -2px;
+}
+
+.hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 60%;
+  padding: 8% 4% 10%;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Герои в бою показываются артом с карточки: заполняем гекс, оставляя лицо и торс. */
+.ally .hex img.cardArt {
+  object-fit: cover;
+  object-position: 50% 14%;
+  padding: 0;
+}
+
+.bar {
+  height: 5px;
+  margin-top: 4px;
+  border-radius: 3px;
+  background: rgba(5, 3, 10, 0.9);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #37e0c8, #6fe9d6);
+  transition: width 180ms ease-out;
+}
+
+.enemy .fill {
+  background: linear-gradient(90deg, #ff5a6e, #ff8a9a);
+}
+
+.name {
+  margin-top: 3px;
+  font-size: 9px;
+  text-align: center;
+  color: rgba(245, 241, 255, 0.72);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flash {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flashOn {
+  animation: flash 220ms ease-out;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.number {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 15px;
+  color: #ff8a9a;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+  animation: float-up 900ms ease-out forwards;
+  pointer-events: none;
+}
+
+.crit {
+  font-size: 21px;
+  color: #ffd77a;
+}
+
+.heal {
+  color: #37e0c8;
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(1.25);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -60%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -130%) scale(0.95);
+  }
+}
+
+.ring {
+  position: absolute;
+  width: 16%;
+  aspect-ratio: 1;
+  border: 2px solid var(--accent, #9b7bff);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 480ms ease-out forwards;
+  pointer-events: none;
+}
+
+.ult {
+  width: 26%;
+  border-width: 3px;
+  animation-duration: 700ms;
+}
+
+.death {
+  border-color: #6c4cf1;
+}
+
+@keyframes ring {
+  0% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+}
+
+.acting {
+  animation: pop 220ms ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.down {
+  opacity: 0.35;
+}
+
+.dead {
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+}
+
+.shielded .hex {
+  outline-color: #9b7bff;
+  outline-width: 2px;
+}
+
+.shake {
+  animation: shake 300ms ease-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unit,
+  .acting,
+  .shake,
+  .ring,
+  .number {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.damage {
+  color: #ff8a9a;
+}

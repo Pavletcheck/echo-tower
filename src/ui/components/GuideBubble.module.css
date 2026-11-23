@@ -1,0 +1,83 @@
+.avatar {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(233, 196, 106, 0.45);
+  border-radius: 50%;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(155, 123, 255, 0.35), rgba(9, 7, 18, 0.95));
+  box-shadow: 0 0 14px rgba(55, 224, 200, 0.18);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(155, 123, 255, 0.34);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(24, 19, 44, 0.96), rgba(9, 7, 18, 0.97));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.compact {
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(14, 10, 26, 0.7);
+  box-shadow: none;
+}
+
+.body {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.role {
+  font-family: var(--font-body);
+  font-size: 9.5px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--text-dim);
+}
+
+.text {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.close {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  border: 1px solid var(--stroke);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.glyph {
+  font-size: 16px;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(55, 224, 200, 0.6);
+}

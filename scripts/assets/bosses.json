@@ -1,0 +1,14 @@
+[
+  {"id": "warden", "prompt": "colossal armored warden with a hexagonal core in its chest, broken chains, stone and glass body, teal light leaking from cracks, empty throne room, towering boss silhouette"},
+  {"id": "glass-choir", "prompt": "three glass hounds with translucent bodies and glowing throats, singing, shattered floor, teal reflections, boss composition"},
+  {"id": "frost-mother", "prompt": "ice queen with a cradle of frozen crystals, long pale dress, blue glowing veins, frozen cathedral, sorrowful face, boss silhouette"},
+  {"id": "ash-knight", "prompt": "knight in blackened armor with burning cracks, greatsword, ember cape, ash storm, towering boss silhouette"},
+  {"id": "rot-smith", "prompt": "bloated smith with root arms and a fungal forge, hammer, spores, green glow, collapsed greenhouse, boss silhouette"},
+  {"id": "master-double", "prompt": "mirror silhouette of a human figure made of black glass, cracked face, violet void, unsettling stillness, boss silhouette"},
+  {"id": "light-keeper", "prompt": "golden angelic figure with many floating hands holding candles, blindfold, radiant wings, marble spire, boss silhouette"},
+  {"id": "silent-master", "prompt": "tall faceless figure in grey robes, sewn mouth, no eyes, floating above a silent hall, faint teal seam, oppressive negative space"},
+  {"id": "archivist", "prompt": "floating librarian made of books and glowing script, many eyes on pages, long ribbon arms, black void, boss silhouette"},
+  {"id": "tower-heart", "prompt": "giant hexagonal crystal heart wrapped in black metal ribs, five elemental veins, pulsing light, cathedral of machinery, boss silhouette"},
+  {"id": "oblivion-tree", "prompt": "colossal rotten tree with hanging name-tags instead of leaves, hollow face, green fog, world boss scale"},
+  {"id": "nira-reflection", "prompt": "dark mirror version of a small acolyte girl, black cloak, inverted lantern with a dying star, tear-streaked face, violet rift, boss silhouette"}
+]

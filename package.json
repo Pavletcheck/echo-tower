@@ -1,0 +1,42 @@
+{
+  "name": "echo-tower",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Echo Tower: Master's Hand — dark fantasy squad auto-battler",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx scripts/validate-content.ts",
+    "balance": "tsx scripts/balance.ts",
+    "balance:gear": "cross-env GEAR=1 tsx scripts/balance.ts",
+    "balance:starter": "cross-env BATTLES=30 tsx scripts/floor-probe.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build:mock": "cross-env PLATFORM=mock vite build --outDir dist-mock",
+    "build:yandex": "cross-env PLATFORM=yandex vite build --outDir dist-yandex",
+    "build:crazy": "cross-env PLATFORM=crazy vite build --outDir dist-crazy",
+    "build:poki": "cross-env PLATFORM=poki vite build --outDir dist-poki",
+    "build:telegram": "cross-env PLATFORM=telegram vite build --outDir dist-telegram",
+    "build:all": "npm run build:yandex && npm run build:crazy && npm run build:poki && npm run build:telegram"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.4",
+    "howler": "^2.2.4",
+    "pixi.js": "^8.23.0",
+    "preact": "^11.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@preact/preset-vite": "^2.10.6",
+    "@types/howler": "^2.2.13",
+    "@types/node": "^26.6.6",
+    "cross-env": "^7.0.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

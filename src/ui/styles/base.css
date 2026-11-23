@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--bg-void);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-synthesis: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--arcane-light);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(108, 76, 241, 0.45);
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  background:
+    radial-gradient(120% 75% at 50% 0%, #1a1130 0%, #0b0714 48%, #050309 100%),
+    var(--bg-void);
+}
+
+.stage::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 50% 50%, rgba(55, 224, 200, 0.055) 0 1px, transparent 1.4px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(70% 60% at 50% 45%, #000 0%, transparent 100%);
+}
+
+.frame {
+  position: relative;
+  width: min(100vw, 520px);
+  height: 100dvh;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--bg-deep);
+}
+
+@media (min-width: 760px) and (min-height: 700px) {
+  .frame {
+    height: min(96dvh, 980px);
+    border: 1px solid var(--stroke);
+    border-radius: 28px;
+    box-shadow:
+      0 40px 120px rgba(0, 0, 0, 0.78),
+      0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  }
+}
+
+/* Десктоп: не телефон в рамке, а широкое окно. */
+@media (min-width: 900px) {
+  .frame {
+    width: min(92vw, 760px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .frame {
+    width: min(86vw, 880px);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Локальные шрифты: latin + cyrillic, OFL, без внешних запросов. */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/oswald-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/oswald-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/manrope-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/manrope-700.woff2') format('woff2');
+}

@@ -1,0 +1,265 @@
+.root {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fade-in 260ms var(--ease-out);
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: 50% 35%;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 5, 13, 0.94) 0%, rgba(7, 5, 13, 0.58) 30%, rgba(7, 5, 13, 0.9) 75%, #07050d 100%),
+    radial-gradient(90% 55% at 50% 40%, transparent 25%, rgba(7, 5, 13, 0.55) 100%);
+}
+
+.top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: calc(10px + var(--safe-top)) 12px 0;
+}
+
+.iconBtn {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--stroke);
+  border-radius: 11px;
+  background: rgba(9, 7, 18, 0.7);
+  color: var(--text-muted);
+}
+
+.heading {
+  display: grid;
+  gap: 1px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sub {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tabs {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 6px;
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  background: rgba(9, 7, 18, 0.6);
+  color: var(--text-muted);
+  font-size: 10.5px;
+}
+
+.tabActive {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(233, 196, 106, 0.08);
+}
+
+.scroll {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  flex: 1;
+  align-content: start;
+  padding: 12px 12px calc(20px + var(--safe-bottom));
+  overflow-y: auto;
+}
+
+.headRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.gold {
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.desc {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+.note {
+  margin: 0;
+  color: var(--echo);
+  font-size: 10px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.calendarCell {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+  min-height: 54px;
+  padding: 4px;
+  border: 1px solid var(--stroke);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  font-size: 7.5px;
+  line-height: 1.15;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.calendarCell b {
+  color: var(--text);
+  font-size: 10px;
+}
+
+.calendarDone {
+  border-color: rgba(55, 224, 200, 0.45);
+  background: rgba(55, 224, 200, 0.08);
+  opacity: 0.7;
+}
+
+.calendarCurrent {
+  border-color: var(--gold);
+  box-shadow: var(--glow-gold);
+}
+
+.bar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--arcane), var(--gold));
+}
+
+.passActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.passList {
+  display: grid;
+  gap: 4px;
+}
+
+.passRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px solid rgba(46, 36, 80, 0.8);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  opacity: 0.6;
+}
+
+.passReached {
+  opacity: 1;
+  border-color: rgba(233, 196, 106, 0.3);
+}
+
+.passLevel {
+  width: 22px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.passReward {
+  display: grid;
+  gap: 1px;
+  flex: 1;
+  font-size: 8.5px;
+  color: var(--text-muted);
+}
+
+.premium {
+  color: #c08bff;
+}
+
+.passButtons {
+  display: grid;
+  gap: 3px;
+}
+
+.rows {
+  display: grid;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid rgba(46, 36, 80, 0.8);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.rowInfo {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+  font-size: 10.5px;
+}
+
+.rowInfo span {
+  color: var(--text-muted);
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+
+.reward {
+  color: var(--gold);
+}
