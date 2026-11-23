@@ -1,6 +1,7 @@
 node_modules/
 dist/
 dist-*/
+_pages/
 art-source/
 _asset-backup/
 *.local
